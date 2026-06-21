@@ -1,0 +1,117 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping_w.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user_w.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe_w.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+
+    <div class="hero">
+      <img src="../img/Hero.jpeg" alt="hero img" />
+
+      <div class="hero_text">
+        <h1>تـميّـز بـرائـحـة</h1>
+        <h1 class="gold">تُـعـبّـرّ عـنــك</h1>
+        <p>عطور فاخرة صنعت بعنايه لتمنحك حضوراً لا يُنسى</p>
+      </div>
+      <button class="hero-btn"><a href="products.html">تسوق الاّن</a></button>
+    </div>
+
+    <section>
+      <div class="title_product">
+        <h3>منتجات مميزة</h3>
+        <button id="showAll">عرض الكل</button>
+      </div>
+
+      <div class="main-container" id="main-container" dir="rtl"></div>
+    </section>
+
+    <section class="features">
+      <div class="icons_2">
+        <img src="../img/transit.svg" alt="pic" />
+        <h4>شحن مجاني</h4>
+        <h6>المشتريات فوق $100</h6>
+      </div>
+
+      <div class="icons_2">
+        <img src="../img/safety.svg" alt="pic" />
+        <h4>منتجات أصلية %100</h4>
+        <h6>مضمونه</h6>
+      </div>
+
+      <div class="icons_2">
+        <img src="../img/secure.svg" alt="pic" />
+        <h4>دفع امن</h4>
+        <h6>و سريع</h6>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer_content">
+        <div class="footer_section" class="content-us">
+          <h3>تواصل معنا</h3>
+          <ul class="social_icons">
+            <li>
+              <a href="#instgram"><img src="../img/instagram.svg" /></a>
+            </li>
+            <li>
+              <a href="#x"><img src="../img/x.svg" /></a>
+            </li>
+            <li>
+              <a href="#facebook"><img src="../img/facebook.svg" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h3>تسوق</h3>
+          <ul>
+            <li><a href="">العروض</a></li>
+            <li><a href="../html/favorites.html">المفضلات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_section">
+          <h3>معلومات</h3>
+          <ul>
+            <li><a href="../html/About.html">من نحن</a></li>
+            <li><a href="Tearms">سياسة الخصوصية</a></li>
+            <li><a href="Return">سياسة الاسترجاع</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_logo">
+          <h3>HEEM</h3>
+          <span>PERFUME</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 جميع الحقوق محفوظة</p>
+      </div>
+    </footer>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}

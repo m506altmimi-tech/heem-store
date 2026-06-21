@@ -1,0 +1,51 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <div class="login-container">
+      <div class="login-box">
+        <h2>إنشاء حساب</h2>
+        <form id="signup_form">
+          <div class="input-group">
+            <input type="text" placeholder="اسم المستخدم" id="Username" />
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Email" id="Email" />
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="كلمة المرور" id="password" />
+          </div>
+          <div class="input-group">
+            <input type="date" id="Birthdate" />
+          </div>
+          <div class="Gender">
+            الجنس:
+            <input type="radio" name="Gender" value="ذكر" />ذكر
+            <input type="radio" name="Gender" value="انثى" />انثى
+          </div>
+          <button>إنشاء حساب</button>
+          <p>لديك حساب؟ <a href="../html/login.html">تسجيل دخول</a></p>
+        </form>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("signup_form");
+      form.addEventListener("submit", function (i) {
+        i.preventDefault();
+
+        const UserData = {
+          Username: document.getElementById("Username").value,
+          Email: document.getElementById("Email").value,
+          password: document.getElementById("password").value,
+          Birthdate: document.getElementById("Birthdate").value,
+          Gender: document.querySelector('input[name="Gender"]:checked')?.value,
+          year: new Date().getFullYear(),
+        };
+
+        localStorage.setItem("UserData", JSON.stringify(UserData));
+        window.location.href = "profile.html";
+      });
+    </script>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}

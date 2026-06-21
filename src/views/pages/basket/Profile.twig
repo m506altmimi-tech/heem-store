@@ -1,0 +1,95 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+    <section class="profile-details" dir="rtl">
+      <div class="box">
+        <div class="profile_top">
+          <img src="../img/background.jpeg" />
+          <h3 id="profile_name"></h3>
+          <p id="profile_email"></p>
+          <p id="profile_date"></p>
+        </div>
+
+        <h3 class="card-title">معلومات الحساب</h3>
+
+        <div class="info-row">
+          <span class="info-label">اسم المستخدم</span>
+          <span class="info-value" id="profile_username"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">البريد الإلكتروني</span>
+          <span class="info-value" id="profile_Email"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">الجنس</span>
+          <span class="info-value" id="profile_Gender"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">تاريخ الميلاد</span>
+          <span class="info-value" id="profile_Birthdate"></span>
+        </div>
+      </div>
+    </section>
+
+    <button id="logoutBtn">تسجيل الخروج</button>
+
+    <script>
+      const savedUser = JSON.parse(localStorage.getItem("UserData"));
+      const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+      if (!savedUser || isLoggedIn !== "true") {
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("profile_name").textContent =
+          savedUser.Username;
+        document.getElementById("profile_email").textContent = savedUser.Email;
+        document.getElementById("profile_date").textContent = savedUser.year;
+
+        document.getElementById("profile_username").textContent =
+          savedUser.Username;
+        document.getElementById("profile_Email").textContent = savedUser.Email;
+        document.getElementById("profile_Gender").textContent =
+          savedUser.Gender;
+        document.getElementById("profile_Birthdate").textContent =
+          savedUser.Birthdate;
+      }
+
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("isLoggedIn");
+          window.location.href = "login.html";
+        });
+    </script>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}

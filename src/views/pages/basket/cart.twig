@@ -1,0 +1,49 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+
+    <h1>🛒 سلة التسوق</h1>
+
+    <!-- حاوية السلة -->
+    <div class="cart-container" id="cart-container" dir="rtl">
+      <!-- رسالة عند عدم وجود منتجات -->
+      <p id="empty-message">السلة فارغة</p>
+    </div>
+
+    <!-- الإجمالي -->
+    <div class="total">
+      <h3>الإجمالي: <span id="total-price">0</span> ريال</h3>
+    </div>
+
+    <button>إتمام الطلب</button>
+
+    <!-- ربط ملف JavaScript -->
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}
