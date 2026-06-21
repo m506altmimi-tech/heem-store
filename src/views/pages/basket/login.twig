@@ -1,0 +1,50 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <div class="login-container">
+      <div class="login-box">
+        <h2>تسجيل الدخول</h2>
+        <form id="login_form">
+          <div class="input-group">
+            <input type="text" placeholder="اسم المستخدم" id="loginUsername" />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="كلمة المرور"
+              id="loginPassword"
+            />
+          </div>
+          <div class="options"><input type="checkbox" />تذكرني</div>
+          <button>تسجيل دخول</button>
+          <p>ليس لديك حساب؟ <a href="../html/signup.html">إنشاء حساب</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("login_form");
+      form.addEventListener("submit", function (i) {
+        i.preventDefault();
+
+        const savedUser = JSON.parse(localStorage.getItem("UserData"));
+
+        const username = document.getElementById("loginUsername").value.trim();
+        const password = document.getElementById("loginPassword").value.trim();
+
+        if (
+          savedUser &&
+          username === savedUser.Username &&
+          password === savedUser.password
+        ) {
+          localStorage.setItem("isLoggedIn", "true");
+          window.location.href = "profile.html";
+        } else {
+          alert("بيانات الدخول غلط");
+        }
+      });
+    </script>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}

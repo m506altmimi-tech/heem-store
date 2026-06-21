@@ -1,0 +1,117 @@
+{% extends 'layouts/master.twig' %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ 'themes/basket/css/About.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Content.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/Profile.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/cart.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/favorites.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/login.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/main.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/product_info.css' | asset }}">\n    <link rel="stylesheet" href="{{ 'themes/basket/css/products.css' | asset }}">\n{% endblock %}
+{% block content %}
+    <header>
+      <nav class="sections">
+        <div class="icons">
+          <a href="cart.html"
+            ><img src="../img\online-shopping.png" alt="Shopping Icon"
+          /></a>
+          <a href="../html/Profile.html"
+            ><img src="../img\user.png" alt="user icon"
+          /></a>
+          <a href="#"><img src="../img\loupe.png" alt="Search Icon" /></a>
+        </div>
+      </nav>
+      <div class="pages">
+        <a href="favorites.html">المفضلة</a>
+        <a href="Content.html">تواصل معنا </a>
+        <a href="About.html">لمحه عنا </a>
+        <a href="products.html">المنتجات</a>
+        <a href="Main.html">الرئيسية</a>
+      </div>
+
+      <div class="logo">
+        <h3>HEEM</h3>
+        <span>PERFUME</span>
+      </div>
+    </header>
+    <div class="content_title">
+      <h1>تواصل معنا</h1>
+      <p>نحن هنا لمساعدتك. تواصل معنا لأي استفسار</p>
+    </div>
+
+    <section class="content_info">
+      <div class="company_info">
+        <div class="email">
+          <img src="../img/email.png" alt="" />
+          <div class="dis">
+            <h6>البريد الالكتروني</h6>
+            <h6>info@gmail.com</h6>
+          </div>
+        </div>
+
+        <div class="phone">
+          <img src="../img/telephone.png" alt="" />
+          <div class="dis">
+            <h6>الهاتف</h6>
+            <h6>+96778888888</h6>
+          </div>
+        </div>
+
+        <div class="address">
+          <img src="../img/address.png" alt="" />
+          <div class="dis">
+            <h6>العنوان</h6>
+            <h6>المكلا. اليمن</h6>
+          </div>
+        </div>
+      </div>
+      <div class="clint_info">
+        <form>
+          <input type="text" placeholder="الاسم" />
+          <input type="email" placeholder="البريد الإلكتروني" />
+          <textarea class="message" type="text" placeholder="رسالتك"></textarea>
+          <button>ارسال الرسالة</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer_content">
+        <div class="footer_section" , class="content-us">
+          <h3>تواصل معنا</h3>
+          <ul class="social_icons">
+            <li>
+              <a href="#instgram"><img src="../img/instagram.svg" /></a>
+            </li>
+            <li>
+              <a href="#x"><img src="../img/x.svg" /></a>
+            </li>
+            <li>
+              <a href="#facebook"><img src="../img/facebook.svg" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h3>تسوق</h3>
+          <ul>
+            <li><a href="">العروض</a></li>
+            <li><a href="../html/favorites.html">المفضلات</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_section">
+          <h3>معلومات</h3>
+          <ul>
+            <li><a href="../html/About.html">من نحن</a></li>
+            <li><a href="Tearms">سياسة الخصوصية</a></li>
+            <li><a href="Return">سياسة الاسترجاع</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_logo">
+          <h3>HEEM</h3>
+          <span>PERFUME</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 جميع الحقوق محفوظة</p>
+      </div>
+    </footer>
+{% endblock %}
+{% block scripts %}
+    <script defer src="{{ 'themes/basket/js/cart.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/core.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/main.js' | asset }}"></script>\n    <script defer src="{{ 'themes/basket/js/product_info.js' | asset }}"></script>\n{% endblock %}

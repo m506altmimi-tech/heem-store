@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+body {
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+* {
+  text-decoration: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 70px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.pages {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.pages a {
+  color: white;
+  font-size: 15px;
+}
+
+.pages a:hover {
+  color: #d6a96c;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.logo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 48px;
+  margin: 0;
+  line-height: 1;
+}
+
+.logo span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 14px;
+  padding-left: 6px;
+}
+
+.pages a:not(:first-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  padding-left: 20px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 0;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero_text {
+  position: absolute;
+  right: 100px;
+  top: 35%;
+  text-align: right;
+  color: white;
+  max-width: 500px;
+}
+
+.hero_text h1 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.hero_text .gold {
+  color: #d6a96c;
+}
+
+.hero_text p {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+}
+
+.hero-btn {
+  position: absolute;
+  right: 100px;
+  top: 75%;
+  width: 170px;
+  height: 40px;
+  border: 2px solid #e3c576;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.hero-btn a {
+  color: #e3c576;
+  font-family: "Tajawal", sans-serif;
+}
+
+.hero-btn:hover {
+  cursor: pointer;
+  background-color: #e3c576;
+}
+
+.hero-btn:hover a {
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
+}
+
+#showAll {
+  background: transparent;
+  border: none;
+  color: #c2a66d;
+  font-family: "Cairo", sans-serif;
+}
+
+.title_product {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+.title_product h3 {
+  margin: 0 auto;
+}
+.title_product button {
+  font-size: 13px;
+  position: absolute;
+  right: 10px;
+  color: rgb(161, 169, 70);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.main-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: min-content;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .card_img {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  padding: 0 20px;
+  text-align: center;
+  background: #f4f7f8;
+  border-radius: 12px;
+}
+.card .card_img img {
+  width: 100%;
+}
+
+.card .card_img .bx-heart {
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+}
+
+.card .card_content h3 {
+  color: #222;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.card .card_content p {
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 8px 0 22px;
+  text-align: justify;
+}
+
+.card_content .add-to-cart {
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  background: linear-gradient(45deg, #d1cea8, #c2a66d);
+}
+
+.features {
+  border-radius: 10px 10px 0px 0px;
+  background-color: #dad6ae;
+  display: flex;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+  height: 140px;
+}
+
+.features img {
+  width: 35px;
+  height: 35px;
+}
+
+.icons_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icons_2 h4,
+h6 {
+  margin: 0;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  color: white;
+  margin-top: 0;
+  padding: 55px 55px 15px 55px;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 0 55px;
+  flex-wrap: wrap;
+}
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer_logo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 48px;
+  margin: 0;
+  line-height: 1;
+}
+
+.footer_logo span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 14px;
+  padding-left: 6px;
+}
+
+.footer_section {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  min-width: 150px;
+  text-align: right;
+}
+
+.footer_section h3 {
+  font-size: 22px;
+  margin: 0 0 25px;
+}
+
+.footer_section ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer_section li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer_section li a {
+  color: white;
+}
+
+.content-us {
+  display: flex;
+  align-items: center;
+}
+
+.social_icons {
+  display: flex;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.social_icons li img {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-bottom {
+  margin-top: auto;
+  text-align: center;
+  color: #aaa;
+}
